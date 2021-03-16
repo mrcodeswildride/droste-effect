@@ -11,8 +11,8 @@ function showMirror() {
   let widthValue = width.value.trim()
 
   if (widthValue != `` && !isNaN(widthValue)) {
-    if (widthValue > 900) {
-      box.innerHTML = `Mirror width cannot be more than 900.`
+    if (widthValue > 500) {
+      box.innerHTML = `Mirror width cannot be more than 500.`
     }
     else {
       box.innerHTML = ``
@@ -20,7 +20,7 @@ function showMirror() {
       let marginValue = 0
       let parentBox = box
 
-      while (widthValue >= 1) {
+      while (widthValue >= 10) {
         let childBox = document.createElement(`div`)
         childBox.style.width = `${widthValue}px`
         childBox.style.height = `${widthValue}px`
