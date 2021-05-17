@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Droste Effect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <link href="mirror.png" rel="prefetch" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>Droste Effect</title>
-	<meta name="viewport" content="width=device-width, initial-scale=0.5">
-	<link href="style.css" rel="stylesheet">
-  <link href="mirror.png" rel="prefetch">
-	<script src="script.js" defer>
+  <body>
+    <h1>Droste Effect</h1>
 
-	</script>
-</head>
+    <p>The mirror will have a reflection of itself.</p>
 
-<body>
-	<h1>Droste Effect</h1>
+    <input type="number" min="0" max="500" placeholder="mirror width" id="width" />
+    <button id="mirrorButton">Show mirror</button>
 
-	<p>
-		The mirror will have a reflection of itself.
-	</p>
-
-	<input type="number" min="0" max="500" placeholder="mirror width" id="width">
-  <button id="mirrorButton">Show mirror</button>
-
-  <div id="box"></div>
-</body>
-
+    <div id="box"></div>
+  </body>
 </html>

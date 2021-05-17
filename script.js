@@ -10,29 +10,26 @@ width.focus()
 function showMirror() {
   let widthValue = width.value.trim()
 
-  if (widthValue != `` && !isNaN(widthValue)) {
-    if (widthValue > 500) {
-      box.innerHTML = `Mirror width cannot be more than 500.`
-    }
-    else {
-      box.innerHTML = ``
+  if (widthValue > 500) {
+    box.innerHTML = `Mirror width cannot be more than 500.`
+  } else {
+    box.innerHTML = ``
 
-      let marginValue = 0
-      let parentBox = box
+    let marginValue = 0
+    let parentBox = box
 
-      while (widthValue >= 10) {
-        let childBox = document.createElement(`div`)
-        childBox.style.width = `${widthValue}px`
-        childBox.style.height = `${widthValue}px`
-        childBox.style.backgroundSize = `${widthValue}px ${widthValue}px`
-        childBox.style.marginTop = `${marginValue}px`
+    while (widthValue >= 10) {
+      let childBox = document.createElement(`div`)
+      childBox.style.width = `${widthValue}px`
+      childBox.style.height = `${widthValue}px`
+      childBox.style.backgroundSize = `${widthValue}px ${widthValue}px`
+      childBox.style.marginTop = `${marginValue}px`
 
-        parentBox.appendChild(childBox)
+      parentBox.appendChild(childBox)
 
-        widthValue = widthValue * 2/3
-        marginValue = widthValue / 4
-        parentBox = childBox
-      }
+      widthValue = (widthValue * 2) / 3
+      marginValue = widthValue / 4
+      parentBox = childBox
     }
   }
 }
